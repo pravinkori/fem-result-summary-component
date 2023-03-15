@@ -68,20 +68,13 @@
 */
 * {
     margin: 0;
-}
-
-/*
-  3. Allow percentage-based heights in the application
-*/
-html,
-body {
-    height: 100%;
+    font: inherit;
 }
 
 /*
   Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
+  3. Add accessible line-height
+  4. Improve text rendering
 */
 body {
     line-height: 1.7;
@@ -89,19 +82,16 @@ body {
 }
 
 /*
-  6. Improve media defaults
+  5. Improve media defaults
 */
 img,
-picture,
-video,
-canvas,
 svg {
     display: block;
     max-width: 100%;
 }
 
 /*
-  7. Remove built-in form typography styles
+  6. Remove built-in form typography styles
 */
 input,
 button,
@@ -110,29 +100,18 @@ select {
     font: inherit;
 }
 
-/*
-  8. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-h1,
-h2,
-h3 {
-    line-height: 1.1;
-}
-
 body {
     font-family: var(--font-family-default);
     font-size: var(--fs-400);
     color: var(--clr-neutral-700);
+}
+
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
 }
 
 /* Utilities */
@@ -141,4 +120,43 @@ body {
     align-items: center;
     gap: .5rem;
     flex-wrap: wrap;
+}
+
+.grid-flow {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+
+.grid-flow[data-spacing="large"] {
+    gap: 2rem;
+}
+
+.section-title {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-600);
+}
+
+.button {
+    color: var(--clr-neutral-100);
+    line-height: 1;
+    background: var(--clr-neutral-700);
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 100vw;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: var(--gradient-primary);
+}
+
+.result-summary {
+    --padding: 2.5rem;
+    --border-radius: 2rem;
+
+    max-width: 46rem;
+    display: grid;
 }
