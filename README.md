@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot of my solution](./design/Screenshot.png)
+![screenshot of my solution](./design/Screenshot.jpg)
 
 ### Links
 
